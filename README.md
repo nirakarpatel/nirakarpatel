@@ -16,7 +16,7 @@
 <img align="right" height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfRH1uEAZwQE59iiaIQ88IUj8-5zxfiUrlA&s"  />
 
 ###
-
+<!----
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
   <img width="12" />
@@ -40,7 +40,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="30" alt="canva logo"  />
 </div>
-
+--->
 ###
 
 <div align="left">
