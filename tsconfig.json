@@ -8,7 +8,6 @@
       "es2017"
     ],
     "moduleResolution": "node",
-    "ignoreDeprecations": "6.0",
     "allowJs": true,
     "noEmit": true,
     "strict": true,
@@ -25,8 +24,8 @@
     "isolatedModules": true,
     "baseUrl": "src",
     "paths": {
-      "@events": ["events"],
-      "@constants": ["constants"]
+      "@constants": ["constants"],
+      "#/components/*": ["components/*"]
     },
     "incremental": true,
     "plugins": [

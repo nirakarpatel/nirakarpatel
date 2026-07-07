@@ -1,11 +1,11 @@
 import Router from 'next/router';
 import { useDragControls } from 'framer-motion';
 
-import { Tile } from 'components/ui/primitives/atoms/tile';
-import { Icon } from 'components/ui/primitives/atoms/icon';
-import { Tooltip } from 'components/ui/primitives/atoms/tooltip';
+import { Tile } from '#/components/atoms/tile';
+import { Icon } from '#/components/atoms/icon';
+import { Tooltip } from '#/components/atoms/tooltip';
 
-import { events } from '@events';
+import { actions } from 'lib/command';
 import { variants, animations } from './animations';
 
 type ItemProps = {
@@ -24,7 +24,7 @@ export function Item(props: ItemProps) {
   function onChangeDisplay() {
     const path = `content.graphs.${stats}.show`;
 
-    events.canvas.edit({ path, value: !isShowing });
+    actions.canvas.edit({ path, value: !isShowing });
   }
 
   function onConfigure() {

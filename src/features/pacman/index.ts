@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { pacmanSectionParser, pacmanWorkflowParser } from './parser';
 import { defaultPacmanSectionConfig } from './default-config';
 
-import { events } from '@events';
+import { actions } from 'lib/command';
 import { PanelsEnum, Sections } from 'types';
 
 const feature = {
@@ -12,8 +12,8 @@ const feature = {
   presentation: {
     [PanelsEnum.NEW_SECTION]: {
       icon: 'ghost',
-      onClick: () => events.canvas.add(Sections.PACMAN),
-      name: 'Pacman',
+      onClick: () => actions.canvas.add(Sections.PACMAN),
+      name: 'Arcade games',
     },
 
     sections: {
@@ -39,4 +39,4 @@ const feature = {
   },
 };
 
-events.extensions.register(feature);
+actions.extensions.register(feature);

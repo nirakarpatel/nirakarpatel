@@ -1,14 +1,11 @@
 import { useMemo, useRef } from 'react';
 import { AnimatePresence, Reorder } from 'framer-motion';
 
-import { GroupFields } from 'components';
-import {
-  IconEditor,
-  IconEditorRef,
-} from 'components/ui/primitives/compound/icon-editor';
-import { Panel } from 'components/ui/primitives/atoms/panel';
+import { GroupFields } from '#/components/organisms/group-fields';
+import { IconEditor, IconEditorRef } from '#/components/molecules/icon-editor';
+import { Panel } from '#/components/organisms/panel';
 
-import { events } from '@events';
+import { actions } from 'lib/command';
 import { useCanvas, useForceUpdate } from 'hooks';
 import { getDeepObjectProperty, getSocialImgUrl } from 'utils';
 
@@ -108,7 +105,7 @@ export function Editing() {
       return obj;
     }, {} as Socials);
 
-    events.canvas.edit({ path, value });
+    actions.canvas.edit({ path, value });
     setTimeout(forceUpdate, 200);
   }
 
